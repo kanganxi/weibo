@@ -21,7 +21,7 @@ class UsersController extends Controller
         ]);
 
         //限流 一个小时内只能提交10次请求：
-        $this->middleware('throttle:10,60',[
+        $this->middleware('throttle:100,60',[
             'only'=>['store']
         ]);
     }

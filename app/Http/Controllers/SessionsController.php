@@ -15,7 +15,7 @@ class SessionsController extends Controller
         ]);
 
         //限制 10分钟十次
-        $this->middleware('throttle:10,10',[
+        $this->middleware('throttle:100,60',[
             'only'=>['store']
         ]);
     }
